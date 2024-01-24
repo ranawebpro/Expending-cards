@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(5, 5, 5);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* IMAGES SOURCES  */
+/* https://wallpapercave.com/pc-games-wallpapers  */
+
+.image-1 {
+  background-image: url(httpswww.pexels.comphoto);
+}
+
+.image-2 {
+  background-image: url(https://images.pexels.com/photos/6272198/pexels-photo-6272198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.image-3 {
+  background-image: url(https://images.pexels.com/photos/5878441/pexels-photo-5878441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.image-4 {
+  background-image: url(https://images.pexels.com/photos/6356885/pexels-photo-6356885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.image-5 {
+  background-image: url(https://images.pexels.com/photos/3282583/pexels-photo-3282583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.slide {
+  position: relative;
+  height: 80vh;
+  flex: 0.5;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 700ms ease-in;
+}
+
+.slide h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  .slide:nth-of-type(4),
+  .slide:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/* JavaScript */
+.slide.active {
+  flex: 5;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
